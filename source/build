@@ -1,0 +1,15 @@
+#!/bin/bash
+
+clear
+pwd
+echo "Building..."
+if [ ! -d ../build ]
+then
+    mkdir ../build
+fi
+
+cd ../build
+
+g++ -o application ../source/*.cpp -I/usr/local/include -L/usr/local/lib -lSDL2 -lSDL2_image -lSDL2_ttf -g 
+
+echo "Done!"
